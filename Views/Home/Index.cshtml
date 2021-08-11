@@ -1,8 +1,23 @@
-﻿@{
+﻿@model List<Dish>
+
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to CRUDelicious!</h1>
+    <div style="display: flex; justify-content: space-evenly">
+        <h6 style="border-bottom: 2px solid black; width: 300px; ">Check out some recent dishes!</h6>
+        <a href="">Add a Dish!</a>
+    </div>
+    <div>
+        @foreach (Dish dish in Model)
+        {
+            <div>
+                @dish.Name
+            </div>
+        }
+    </div>
+
 </div>

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Crud.Models
 {
-    public class Dishes
+    public class Dish
     {
         [Key]
         public int DishID { get; set; }

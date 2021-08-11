@@ -6,22 +6,38 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Crud.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Crud.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private CrudContext dbContext;
+        public HomeController(CrudContext context)
         {
-            _logger = logger;
+            dbContext = context;
         }
-
+        [HttpGet("")]
         public IActionResult Index()
         {
+            ViewBag.AllDishes = dbContext.Dishes.ToList();
+            // ViewBag.Chef = dbContext.Dishes.Where(d => d.Chef == "Lawrence");
+            // ViewBag.MostRecent = dbContext.Dishes.OrderByDescending(d => d.CreatedAt)
+            // .Take(5)
+            // .ToList();
             return View();
         }
+
+        public IActionResult GetOneChef(string Name)
+        {
+            Dish single = dbContext.Dishes.FirstOrDefault(dish => dish.Name == Name);
+            return View();
+        }
+
+
+
+
+
 
         public IActionResult Privacy()
         {
