@@ -28,6 +28,64 @@ namespace Crud.Controllers
             return View();
         }
 
+        [HttpGet("/new")]
+        public IActionResult NewDish(Dish newDish)
+        {
+            ViewBag.Dish = newDish;
+            return View("AddDish");
+        }
+        [HttpPost("create")]
+        public IActionResult CreateDish(Dish newDish)
+        {
+            dbContext.Add(newDish);
+            ViewBag.Dish = newDish;
+            dbContext.SaveChanges();
+            return View("newDish", newDish);
+        }
+
+        [HttpGet("/dish/{dishId}")]
+        public IActionResult ViewDish(Dish dish)
+        {
+            ViewBag.Dish = dbContext.Dishes.FirstOrDefault(d => d.DishID == dish.DishID);
+            return View("NewDish", dish);
+        }
+
+        [HttpGet("/delete/{dishId}")]
+        public IActionResult DeleteDish(int dishId)
+        {
+            Dish RetrievedDish = dbContext.Dishes.SingleOrDefault(d => d.DishID == dishId);
+
+            dbContext.Dishes.Remove(RetrievedDish);
+
+            dbContext.SaveChanges();
+            ViewBag.AllDishes = dbContext.Dishes.ToList();
+            return RedirectToAction("");
+        }
+
+        [HttpGet("/edit/{dishId}")]
+        public IActionResult EditDish(int dishId)
+        {
+            Dish RetrievedDish = dbContext.Dishes.FirstOrDefault(dish => dish.DishID == dishId);
+
+            return View("EditDish", RetrievedDish);
+        }
+
+        [HttpPost("/change/{dishId}")]
+        public IActionResult Change(int dishId, Dish updatedDish)
+        {
+            Dish RetrievedDish = dbContext.Dishes.FirstOrDefault(dish => dish.DishID == dishId);
+            RetrievedDish.Name = updatedDish.Name;
+            RetrievedDish.Chef = updatedDish.Chef;
+            RetrievedDish.Calories = updatedDish.Calories;
+            RetrievedDish.Tastiness = updatedDish.Tastiness;
+            RetrievedDish.Description = updatedDish.Description;
+            dbContext.Dishes.Update(RetrievedDish);
+            dbContext.SaveChanges();
+
+            return RedirectToAction("ViewDish", new { dishId = dishId });
+        }
+
+
         public IActionResult GetOneChef(string Name)
         {
             Dish single = dbContext.Dishes.FirstOrDefault(dish => dish.Name == Name);

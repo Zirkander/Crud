@@ -15624,8 +15624,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Coding Dojo\\C#\\Asp\\Crud\\Views\\Home\\newDish.cshtml",
+      "TargetPath": "Views\\Home\\newDish.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Coding Dojo\\C#\\Asp\\Crud\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Coding Dojo\\C#\\Asp\\Crud\\Views\\Home\\AddDish.cshtml",
+      "TargetPath": "Views\\Home\\AddDish.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15641,6 +15651,11 @@
     {
       "FilePath": "e:\\Coding Dojo\\C#\\Asp\\Crud\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\Coding Dojo\\C#\\Asp\\Crud\\Views\\Home\\EditDish.cshtml",
+      "TargetPath": "Views\\Home\\EditDish.cshtml",
       "FileKind": "mvc"
     },
     {

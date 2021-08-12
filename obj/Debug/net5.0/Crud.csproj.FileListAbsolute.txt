@@ -48,3 +48,6 @@ E:\Coding Dojo\C#\Asp\Crud\obj\Debug\net5.0\ref\Crud.dll
 E:\Coding Dojo\C#\Asp\Crud\obj\Debug\net5.0\Crud.pdb
 E:\Coding Dojo\C#\Asp\Crud\obj\Debug\net5.0\Crud.genruntimeconfig.cache
 E:\Coding Dojo\C#\Asp\Crud\bin\Debug\net5.0\appsettings.json
+E:\Coding Dojo\C#\Asp\Crud\obj\Debug\net5.0\Razor\Views\Home\AddDish.cshtml.g.cs
+E:\Coding Dojo\C#\Asp\Crud\obj\Debug\net5.0\Razor\Views\Home\NewDish.cshtml.g.cs
+E:\Coding Dojo\C#\Asp\Crud\obj\Debug\net5.0\Razor\Views\Home\EditDish.cshtml.g.cs

@@ -5,23 +5,19 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to CRUDelicious!</h1>
-    <div>
-        <div style="display: flex; justify-content: space-evenly">
-            <p>
-            <h6 style="border-bottom: 2px solid black; width: 300px; ">Check out some recent dishes!</h6><a href="">Add a Dish!</a>
-            <hr>
-            </p>
-            <div>
-                    <ul>
+<div>
+    <div style="display: flex; justify-content: space-evenly">
+        <p>
+        </p>
+        <div>
+            <ul style="display: flex; flex-direction:column; margin-right: 450px;">
                 @foreach (Dish dish in ViewBag.AllDishes)
                 {
-                    <a href="">@dish.Name</a>
+                    <a href="/dish/@dish.DishID">@dish.Name</a>
                 }
-                    </ul>
-            </div>
+            </ul>
         </div>
     </div>
+</div>
 
 </div>

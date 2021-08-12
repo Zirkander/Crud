@@ -1,0 +1,38 @@
+@model Dish
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @ViewBag.Chef!</h1>
+    <form asp-controller="Home" asp-action="CreateDish" method="POST">
+        <div>
+            <label asp-for="Chef">Chef's Name: </label>
+            <input asp-for="Chef" />
+        </div>
+        <div>
+            <label asp-for="Name">Recipe Name: </label>
+            <input asp-for="Name" />
+        </div>
+        <div>
+            <label asp-for="Calories">Calories: </label>
+            <input asp-for="Calories" />
+        </div>
+        <div>
+            <select asp-for="Tastiness">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div>
+            <label asp-for="Description">Description: </label>
+            <textarea asp-for="Description"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
