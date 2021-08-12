@@ -1,5 +1,4 @@
 E:\Coding Dojo\C#\Asp\Crud\bin\Debug\net5.0\appsettings.Development.json
-E:\Coding Dojo\C#\Asp\Crud\bin\Debug\net5.0\appsettings.json
 E:\Coding Dojo\C#\Asp\Crud\bin\Debug\net5.0\Crud.exe
 E:\Coding Dojo\C#\Asp\Crud\bin\Debug\net5.0\Crud.deps.json
 E:\Coding Dojo\C#\Asp\Crud\bin\Debug\net5.0\Crud.runtimeconfig.json
@@ -48,3 +47,4 @@ E:\Coding Dojo\C#\Asp\Crud\obj\Debug\net5.0\Crud.dll
 E:\Coding Dojo\C#\Asp\Crud\obj\Debug\net5.0\ref\Crud.dll
 E:\Coding Dojo\C#\Asp\Crud\obj\Debug\net5.0\Crud.pdb
 E:\Coding Dojo\C#\Asp\Crud\obj\Debug\net5.0\Crud.genruntimeconfig.cache
+E:\Coding Dojo\C#\Asp\Crud\bin\Debug\net5.0\appsettings.json

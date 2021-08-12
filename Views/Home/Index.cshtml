@@ -1,4 +1,4 @@
-﻿@model List<Dish>
+﻿@model Dish
 
 
 @{
@@ -7,17 +7,21 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome to CRUDelicious!</h1>
-    <div style="display: flex; justify-content: space-evenly">
-        <h6 style="border-bottom: 2px solid black; width: 300px; ">Check out some recent dishes!</h6>
-        <a href="">Add a Dish!</a>
-    </div>
     <div>
-        @foreach (Dish dish in Model)
-        {
+        <div style="display: flex; justify-content: space-evenly">
+            <p>
+            <h6 style="border-bottom: 2px solid black; width: 300px; ">Check out some recent dishes!</h6><a href="">Add a Dish!</a>
+            <hr>
+            </p>
             <div>
-                @dish.Name
+                    <ul>
+                @foreach (Dish dish in ViewBag.AllDishes)
+                {
+                    <a href="">@dish.Name</a>
+                }
+                    </ul>
             </div>
-        }
+        </div>
     </div>
 
 </div>
